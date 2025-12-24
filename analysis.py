@@ -56,14 +56,12 @@ def main() -> None:
     plt.tight_layout()
     plt.show()
 
-    # 5) Conclusions (short, human-readable)
-    print("\nConclusions:")
-    print(f"- Sex is a strong factor: female survival rate ≈ {survival_by_sex.get('female', float('nan')):.2f}, "
-          f"male ≈ {survival_by_sex.get('male', float('nan')):.2f}.")
-    print(f"- Ticket class matters: 1st class ≈ {survival_by_class.loc[1]:.2f}, "
-          f"2nd ≈ {survival_by_class.loc[2]:.2f}, 3rd ≈ {survival_by_class.loc[3]:.2f}.")
-    print("- Age effect is weaker in terms of mean age, but distributions can differ (see histogram).")
-    print("- Higher ticket fares tend to be associated with better outcomes (median fare is higher for survivors).")
+    # 5) Conclusions (rus)
+    print("\nВыводы:")
+    print("- Женщины выживали заметно чаще мужчин.")
+    print("- Чем выше класс, тем выше доля выживших.")
+    print("- Средний возраст выживших и погибших близок, поэтому возраст не главный фактор по среднему.")
+    print("- Цена билета в среднем выше у выживших (но лучше проверять медианой, если есть выбросы).")
 
 
 if __name__ == "__main__":
